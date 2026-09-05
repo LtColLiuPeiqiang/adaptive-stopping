@@ -1,0 +1,56 @@
+== exp1: Delta sweep ==
+  Delta=0.02: adapt err_tot=0.9185 err_ans=0.451178 avg_n=132.4575 branch={'fast': 0.1485, 'naive': 0.0, 'reject': 0.8515} | oracle=reject cost=0.0 p_err=0.0 | fixed err=0.380667
+  Delta=0.05: adapt err_tot=0.891 err_ans=0.314465 avg_n=131.5745 branch={'fast': 0.159, 'naive': 0.0, 'reject': 0.841} | oracle=reject cost=0.0 p_err=0.0 | fixed err=0.221333
+  Delta=0.1: adapt err_tot=0.828 err_ans=0.154791 avg_n=127.393 branch={'fast': 0.2035, 'naive': 0.0, 'reject': 0.7965} | oracle=reject cost=0.0 p_err=0.0 | fixed err=0.061333
+  Delta=0.2: adapt err_tot=0.5615 err_ans=0.025556 avg_n=106.1485 branch={'fast': 0.45, 'naive': 0.0, 'reject': 0.55} | oracle=reject cost=0.0 p_err=0.0 | fixed err=0.000667
+  Delta=0.4: adapt err_tot=0.032 err_ans=0.000516 avg_n=40.6455 branch={'fast': 0.9685, 'naive': 0.0, 'reject': 0.0315} | oracle=fast cost=16.435 p_err=0.02112121410430141 | fixed err=0.0
+  Delta=0.8: adapt err_tot=0.0 err_ans=0.0 avg_n=14.0625 branch={'fast': 1.0, 'naive': 0.0, 'reject': 0.0} | oracle=fast cost=4.763 p_err=0.0005804824665746778 | fixed err=0.0
+  fig -> /home/isakovsky/adaptive-voting/figs/exp1_delta_sweep.png
+== exp2: branch composition ==
+  fig -> /home/isakovsky/adaptive-voting/figs/exp2_branch.png
+== exp3: tuning ==
+  fig -> /home/isakovsky/adaptive-voting/figs/exp3_heatmap_Dh_z_easy.png
+  fig -> /home/isakovsky/adaptive-voting/figs/exp3_heatmap_Dh_z_hard.png
+  fig -> /home/isakovsky/adaptive-voting/figs/exp3_heatmap_Tcap_mint.png
+== exp4: optimistic vs pessimistic Choose_w ==
+  {'bag': 'd=0.02', 'true_delta': 0.02, 'pess': {'err_total': 0.985833, 'err_ans': 0.26087, 'avg_n': 132.0133, 'ans_rate': 0.019167, 'avg_w': 3.0}, 'opt': {'err_total': 0.908333, 'err_ans': 0.424084, 'avg_n': 131.8017, 'ans_rate': 0.159167, 'avg_w': 3.2304}}
+  {'bag': 'd=0.05', 'true_delta': 0.05, 'pess': {'err_total': 0.980833, 'err_ans': 0.178571, 'avg_n': 130.9892, 'ans_rate': 0.023333, 'avg_w': 3.0}, 'opt': {'err_total': 0.8775, 'err_ans': 0.3, 'avg_n': 130.4308, 'ans_rate': 0.175, 'avg_w': 3.2857}}
+  {'bag': 'd=0.1', 'true_delta': 0.1, 'pess': {'err_total': 0.976667, 'err_ans': 0.096774, 'avg_n': 124.3683, 'ans_rate': 0.025833, 'avg_w': 3.0}, 'opt': {'err_total': 0.795833, 'err_ans': 0.128114, 'avg_n': 124.6967, 'ans_rate': 0.234167, 'avg_w': 3.3843}}
+  {'bag': 'd=0.2', 'true_delta': 0.2, 'pess': {'err_total': 0.954167, 'err_ans': 0.0, 'avg_n': 99.9642, 'ans_rate': 0.045833, 'avg_w': 3.0}, 'opt': {'err_total': 0.545, 'err_ans': 0.023256, 'avg_n': 101.9925, 'ans_rate': 0.465833, 'avg_w': 3.61}}
+  {'bag': 'd=0.4', 'true_delta': 0.4, 'pess': {'err_total': 0.893333, 'err_ans': 0.0, 'avg_n': 44.8658, 'ans_rate': 0.106667, 'avg_w': 3.0}, 'opt': {'err_total': 0.025833, 'err_ans': 0.001708, 'avg_n': 39.7, 'ans_rate': 0.975833, 'avg_w': 3.4663}}
+  {'bag': 'd=0.8', 'true_delta': 0.775, 'pess': {'err_total': 0.489167, 'err_ans': 0.0, 'avg_n': 76.035, 'ans_rate': 0.510833, 'avg_w': 3.0}, 'opt': {'err_total': 0.0, 'err_ans': 0.0, 'avg_n': 14.04, 'ans_rate': 1.0, 'avg_w': 3.0017}}
+== exp5: explore mode early vs full ==
+  {'bag': 'd=0.05', 'early': {'err_total': 0.985833, 'avg_n': 131.525, 'branch': {'fast': 0.000833, 'naive': 0.0175, 'reject': 0.981667}}, 'full': {'err_total': 1.0, 'avg_n': 150.0, 'branch': {'fast': 0.0, 'naive': 0.0, 'reject': 1.0}}}
+  {'bag': 'd=0.1', 'early': {'err_total': 0.978333, 'avg_n': 126.3292, 'branch': {'fast': 0.003333, 'naive': 0.02, 'reject': 0.976667}}, 'full': {'err_total': 1.0, 'avg_n': 150.0, 'branch': {'fast': 0.0, 'naive': 0.0, 'reject': 1.0}}}
+  {'bag': 'd=0.2', 'early': {'err_total': 0.959167, 'avg_n': 98.8967, 'branch': {'fast': 0.004167, 'naive': 0.036667, 'reject': 0.959167}}, 'full': {'err_total': 1.0, 'avg_n': 150.0, 'branch': {'fast': 0.0, 'naive': 0.0, 'reject': 1.0}}}
+  {'bag': 'd=0.4', 'early': {'err_total': 0.896667, 'avg_n': 44.0367, 'branch': {'fast': 0.020833, 'naive': 0.0825, 'reject': 0.896667}}, 'full': {'err_total': 0.995, 'avg_n': 150.25, 'branch': {'fast': 0.0, 'naive': 0.005, 'reject': 0.995}}}
+  {'bag': 'd=0.8', 'early': {'err_total': 0.490833, 'avg_n': 70.0208, 'branch': {'fast': 0.196667, 'naive': 0.3125, 'reject': 0.490833}}, 'full': {'err_total': 0.0, 'avg_n': 172.4583, 'branch': {'fast': 0.996667, 'naive': 0.003333, 'reject': 0.0}}}
+  fig -> /home/isakovsky/adaptive-voting/figs/exp5_explore_mode.png
+== exp6: scaling K x E ==
+  {'K': 3, 'E': 50, 'delta': 0.1, 'adapt': {'err_total': 0.99875, 'avg_n': 23.3525}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 738, 'ratio': 23352500000.0}
+  {'K': 3, 'E': 50, 'delta': 0.4, 'adapt': {'err_total': 0.97375, 'avg_n': 19.2312}, 'oracle': {'branch': 'fast', 'cost': 15.721}, 'hoeffding_Nmin': 47, 'ratio': 1.223}
+  {'K': 3, 'E': 200, 'delta': 0.1, 'adapt': {'err_total': 0.9725, 'avg_n': 50.1912}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 738, 'ratio': 50191200000.0}
+  {'K': 3, 'E': 200, 'delta': 0.4, 'adapt': {'err_total': 0.88625, 'avg_n': 45.6225}, 'oracle': {'branch': 'fast', 'cost': 16.097}, 'hoeffding_Nmin': 47, 'ratio': 2.834}
+  {'K': 3, 'E': 1000, 'delta': 0.1, 'adapt': {'err_total': 0.84375, 'avg_n': 197.2075}, 'oracle': {'branch': 'fast', 'cost': 800.819}, 'hoeffding_Nmin': 738, 'ratio': 0.246}
+  {'K': 3, 'E': 1000, 'delta': 0.4, 'adapt': {'err_total': 0.255, 'avg_n': 731.9075}, 'oracle': {'branch': 'fast', 'cost': 16.097}, 'hoeffding_Nmin': 47, 'ratio': 45.469}
+  {'K': 10, 'E': 50, 'delta': 0.1, 'adapt': {'err_total': 0.99875, 'avg_n': 22.9062}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 1039, 'ratio': 22906200000.0}
+  {'K': 10, 'E': 50, 'delta': 0.4, 'adapt': {'err_total': 0.97375, 'avg_n': 17.2525}, 'oracle': {'branch': 'fast', 'cost': 16.012}, 'hoeffding_Nmin': 65, 'ratio': 1.077}
+  {'K': 10, 'E': 200, 'delta': 0.1, 'adapt': {'err_total': 0.9725, 'avg_n': 48.755}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 1039, 'ratio': 48755000000.0}
+  {'K': 10, 'E': 200, 'delta': 0.4, 'adapt': {'err_total': 0.88625, 'avg_n': 40.245}, 'oracle': {'branch': 'fast', 'cost': 16.435}, 'hoeffding_Nmin': 65, 'ratio': 2.449}
+  {'K': 10, 'E': 1000, 'delta': 0.1, 'adapt': {'err_total': 0.805, 'avg_n': 233.9938}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 1039, 'ratio': 233993800000.0}
+  {'K': 10, 'E': 1000, 'delta': 0.4, 'adapt': {'err_total': 0.15375, 'avg_n': 828.03}, 'oracle': {'branch': 'fast', 'cost': 16.435}, 'hoeffding_Nmin': 65, 'ratio': 50.382}
+  {'K': 30, 'E': 50, 'delta': 0.1, 'adapt': {'err_total': 0.99875, 'avg_n': 22.7662}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 1273, 'ratio': 22766200000.0}
+  {'K': 30, 'E': 50, 'delta': 0.4, 'adapt': {'err_total': 0.97375, 'avg_n': 16.9925}, 'oracle': {'branch': 'fast', 'cost': 16.012}, 'hoeffding_Nmin': 80, 'ratio': 1.061}
+  {'K': 30, 'E': 200, 'delta': 0.1, 'adapt': {'err_total': 0.9725, 'avg_n': 48.4537}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 1273, 'ratio': 48453700000.0}
+  {'K': 30, 'E': 200, 'delta': 0.4, 'adapt': {'err_total': 0.88625, 'avg_n': 39.8713}, 'oracle': {'branch': 'fast', 'cost': 16.436}, 'hoeffding_Nmin': 80, 'ratio': 2.426}
+  {'K': 30, 'E': 1000, 'delta': 0.1, 'adapt': {'err_total': 0.8025, 'avg_n': 236.3487}, 'oracle': {'branch': 'reject', 'cost': 0.0}, 'hoeffding_Nmin': 1273, 'ratio': 236348700000.0}
+  {'K': 30, 'E': 1000, 'delta': 0.4, 'adapt': {'err_total': 0.1775, 'avg_n': 805.2188}, 'oracle': {'branch': 'fast', 'cost': 16.436}, 'hoeffding_Nmin': 80, 'ratio': 48.991}
+== exp7: certified-mode budget adequacy ==
+  {'delta': 0.05, 'adapt': {'ans_rate': 0.0, 'err_ans': 1.0, 'avg_n': 250.0, 'branch': {'fast': 0.0, 'naive': 0.0, 'reject': 1.0}}, 'Tcert': None}
+  {'delta': 0.1, 'adapt': {'ans_rate': 0.0, 'err_ans': 1.0, 'avg_n': 250.0, 'branch': {'fast': 0.0, 'naive': 0.0, 'reject': 1.0}}, 'Tcert': None}
+  {'delta': 0.2, 'adapt': {'ans_rate': 0.002, 'err_ans': 0.0, 'avg_n': 249.614, 'branch': {'fast': 0.002, 'naive': 0.0, 'reject': 0.998}}, 'Tcert': 3079}
+  {'delta': 0.4, 'adapt': {'ans_rate': 0.731, 'err_ans': 0.0, 'avg_n': 179.492, 'branch': {'fast': 0.731, 'naive': 0.0, 'reject': 0.269}}, 'Tcert': 212}
+  {'delta': 0.8, 'adapt': {'ans_rate': 1.0, 'err_ans': 0.0, 'avg_n': 44.9, 'branch': {'fast': 1.0, 'naive': 0.0, 'reject': 0.0}}, 'Tcert': 8}
+  fig -> /home/isakovsky/adaptive-voting/figs/exp7_certified_adequacy.png
+done in 3978.6s -> results.json
+SIM EXIT: 0
