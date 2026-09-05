@@ -11,10 +11,6 @@ It reproduces every table and figure number reported in the paper's experimental
 excluded; the code here is the minimal, dependency-light core that generates `results.json`
 and the raw numbers cited in the paper.
 
-本包收录论文(ESWA 投稿《预算感知自适应多数投票 + 认证式拒绝》)实验部分(§5)的全部代码:
-合成摸球实验 + LLM 上游实验。已剔除绘图与讲义脚本,仅保留生成论文全部表格/图数值的
-最小核心代码。
-
 ---
 
 ## 1. Directory layout / 目录结构
